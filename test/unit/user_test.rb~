@@ -33,8 +33,4 @@ class UserTest < ActiveSupport::TestCase
     assert u2.errors[:username].any?
 
   end
-  
-  test "the truth" do
-    assert true
-  end
 end
