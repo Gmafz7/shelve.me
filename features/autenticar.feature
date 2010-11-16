@@ -1,4 +1,4 @@
-#language: es
+#language: es 
 Característica: Autenticar usuarios
     Para poder crear retos
     Como un participante
