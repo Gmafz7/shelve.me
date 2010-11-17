@@ -33,11 +33,6 @@ class UserTest < ActiveSupport::TestCase
     assert u2.errors[:username].any?
 
   end
-<<<<<<< HEAD
-  
-  test "the truth" do
-    assert true
-=======
 
   test "books are added" do 
     
@@ -70,6 +65,9 @@ class UserTest < ActiveSupport::TestCase
       user.books.delete books(:one)
     end
     
->>>>>>> cf0f2800ff61b3aafd03d22ab35c2e65d55b39f3
+    test "the truth" do
+      assert true
+    end
+    
   end
 end
