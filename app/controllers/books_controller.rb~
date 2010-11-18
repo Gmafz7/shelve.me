@@ -9,10 +9,9 @@ class BooksController < ApplicationController
 
   def create
     @book = Book.new(params[:book])
-    @book.save
      
     if @book.save
-       redirect_to book_path @book
+       redirect_to books_path #@book
     else
       render :action => "new"
     end
@@ -24,7 +23,7 @@ class BooksController < ApplicationController
   end
 
   def search
-    @books = Book.new
+    @books = Book.search(params[:search])
   end
 
 end

@@ -1,4 +1,7 @@
 class BooksController < ApplicationController
+  
+  #before_filter :authenticate_user!
+  
   def index
     @books = Book.all
   end
@@ -23,6 +26,7 @@ class BooksController < ApplicationController
   end
 
   def search
+    @books = Book.search(params[:search])
   end
 
 end

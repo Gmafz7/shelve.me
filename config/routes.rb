@@ -1,10 +1,12 @@
 ShelveMe::Application.routes.draw do
   
+  devise_for :users
+  
   resources :books, :only => [:index, :show, :new, :create] do
     get 'search', :on => :collection
   end
-
-  devise_for :users
+  
+  get "static/index"
   
   root :to => "static#index"
   # The priority is based upon order of creation:

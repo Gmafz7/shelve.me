@@ -1,2 +1,6 @@
-<h1>Books#search</h1>
-<p>Find me in app/views/books/search.html.erb</p>
+<%= form_tag search_books_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit:tag "Search", :name => nil %>
+  </p>
+<% end %>
