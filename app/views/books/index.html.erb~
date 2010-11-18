@@ -1,6 +1,10 @@
 <h1>Todos los libros</h1>
 <ul>
-  <% books.each do |libro|%>
-    <li><%= libro.title%> by <%=libro.author%></li>
+  <% @books.each do |libro|%>
+    <li>
+      <%= link_to libro.title, libro%>
+      by <%=libro.author%>
+      added <%= distance_of_time_in_words DateTime.now, libro.created_at at %> ago
+    </li>
   <%end%>
 </ul>
